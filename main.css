@@ -87,12 +87,12 @@ header img {
 
 /* the styles for the main content */
 main {
-	clear: left;
+
 }
 /* the styles for the section */
 section {
 	width: 525px;
-	float: right;
+	float: center;
 	padding: 0 20px 20px 20px;
 }
 section h1 {
@@ -160,7 +160,7 @@ aside img {
 
 /* the styles for the footer */
 footer {
-	background-color: #931420;
+	background-color: #2E4053 ;
 	clear: both;
 
 }
