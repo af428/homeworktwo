@@ -101,7 +101,7 @@ section h1 {
 	margin: 0;               /* If you remove this, the margins in normalize.css will be applied. */
 }
 section h2 {
-	color: #ffffff;
+	color: #17202A;
 	font-size: 130%;
 	padding: .5em 0 .25em 0;
 }
@@ -122,8 +122,8 @@ section li {
 /* the styles for the article */
 article {
 	padding: .5em 0;
-	border-top: 2px solid #ffffff;
-	border-bottom: 2px solid #ffffff;
+	border-top: 2px solid #707B7C;
+	border-bottom: 2px solid #707B7C;
 }
 article h2 {
 	padding-top: 0;
