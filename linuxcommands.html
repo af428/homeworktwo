@@ -23,7 +23,125 @@
     	<section>
             <h1>Linux Commands and how to log into your Docker container</h1>
                 <h2>The Linux Commands goes as follows: </h2>
-                <img src="images/linuxcommands.jpg" alt="Linux Commands Cheatsheet" height="500" width="750">
+                <ul>
+			<li> s – directory listing </li>
+			<li>ls -al – formatted listing with hidden files</li>
+			<li>cd dir - change directory to dir</li>
+			<li>cd – change to home</li>
+			<li>pwd – show current directory</li>
+			<li>mkdir dir – create a directory dir</li>
+			<li>rm file – delete file</li>
+			<li>rm -r dir – delete directory dir</li>
+			<li>rm -f file – force remove file</li>
+			<li>rm -rf dir – force remove directory dir *</li>
+			<li>cp file1 file2 – copy file1 to file2</li>
+			<li>cp -r dir1 dir2 – copy dir1 to dir2; create dir2 if it doesn't exist</li>
+			<li>mv file1 file2 – rename or move file1 to file2 if file2 is an existing directory, moves file1 into directory file2</li>
+			<li>ln -s file link – create symbolic link link to file</li>
+			<li>touch file – create or update file</li>
+			<li>cat > file – places standard input into file</li>
+			<li>more file – output the contents of file</li>
+			<li>head file – output the first 10 lines of file</li>
+			<li>tail file – output the last 10 lines of file</li>
+			<li>tail -f file – output the contents of file as it grows, starting with the last 10 lines</li>
+		</ul>
+		<p>Process Management:</p>
+		<ul>
+			<li>ps – display your currently active processes</li>
+			<li>top – display all running processes</li>
+			<li>kill pid – kill process id pid</li>
+			<li>killall proc – kill all processes named proc *</li>
+			<li>bg – lists stopped or background jobs; resume a stopped job in the background</li>
+			<li>fg – brings the most recent job to foreground</li>
+			<li>fg n – brings job n to the foreground</li>
+		</ul>
+		<p>File Permissions:</p>
+
+		<ul>
+			<li>chmod octal file – change the permissions of file to octal, which can be found separately for user, group, and world by adding:</li>
+			<li>4 – read (r)</li>
+			<li>2 – write (w)</li>
+			<li>1 – execute (x)</li>
+		</ul>
+		<p>Examples:</p>
+		<ul>
+			<li>chmod 777 – read, write, execute for all</li>
+			<li>chmod 755 – rwx for owner, rx for group and world</li>
+		</ul>
+		<p>SSH:</p>
+		<ul>
+			<li>ssh user@host – connect to host as user</li>
+			<li>ssh -p port user@host – connect to host on port port as user</li>
+			<li>ssh-copy-id user@host – add your key to host for user to enable a keyed or passwordless login</li>
+		</ul>
+		<p>Searching:</p>
+		<ul>
+			<li>grep pattern files – search for pattern in files</li>
+			<li>grep -r pattern dir – search recursively for pattern in dir</li>
+			<li>command | grep pattern – search for pattern in the output of command</li>
+			<li>locate file – find all instances of file</li>
+		</ul>
+		<p>System Info:</p>
+		<ul>
+			<li>date – show the current date and time</li>
+			<li>cal – show this month's calendar</li>
+			<li>uptime – show current uptime</li>
+			<li>w – display who is online</li>
+			<li>whoami – who you are logged in as</li>
+			<li>finger user – display information about user</li>
+			<li>uname -a – show kernel information</li>
+			<li>cat /proc/cpuinfo – cpu information</li>
+			<li>cat /proc/meminfo – memory information</li>
+			<li>man command – show the manual for command</li>
+			<li>df – show disk usage</li>
+			<li>du – show directory space usage</li>
+			<li>free – show memory and swap usage</li>
+			<li>whereis app – show possible locations of app</li>
+			<li>which app – show which app will be run by default</li>
+		</ul>
+		<p>Compression:</p>
+		<ul>
+			<li>tar cf file.tar files – create a tar named file.tar containing files</li>
+			<li>tar xf file.tar – extract the files from file.tar</li>
+			<li>tar czf file.tar.gz files – create a tar with Gzip compression</li>
+			<li>tar xzf file.tar.gz – extract a tar using Gzip</li>
+			<li>tar cjf file.tar.bz2 – create a tar with Bzip2 compression</li>
+			<li>tar xjf file.tar.bz2 – extract a tar using Bzip2</li>
+			<li>gzip file – compresses file and renames it to file.gz</li>
+			<li>gzip -d file.gz – decompresses file.gz back to file</li>
+		</ul>
+		<p>Network:</p>
+<ul>
+			<li>ping host – ping host and output results</li>
+			<li>whois domain – get whois information for domain</li>
+			<li>dig domain – get DNS information for domain</li>
+			<li>dig -x host – reverse lookup host</li>
+			<li>wget file – download file</li>
+			<li>wget -c file – continue a stopped download</li>
+		</ul>
+		<p>Installation:</p>
+<ul>
+			<li>dpkg -i pkg.deb – install a package (Debian)</li>
+			<li>rpm -Uvh pkg.rpm – install a package (RPM)</li>
+		</ul>
+		<p>Install from source:</p>
+<ul>
+			<li>./configure</li>
+			<li>make</li>
+			<li>make install</li>
+		</ul>
+		<p>Shortcuts:</p>
+<ul>
+			<li>Ctrl+C – halts the current command</li>
+			<li>Ctrl+Z – stops the current command, resume with</li>
+			<li>fg in the foreground or bg in the background</li>
+			<li>Ctrl+D – log out of current session, similar to exit</li>
+			<li>Ctrl+W – erases one word in the current line</li>
+			<li>Ctrl+U – erases the whole line</li>
+			<li>Ctrl+R – type to bring up a recent command</li>
+			<li>!! - repeats the last command</li>
+			<li>exit – log out of current session</li>
+		</ul>
                 <br><h3>How to log into your Docker container:</h3>
                 <p>This Tory Burch Crossbody is made out of the durable Saffiano Leather, perfect for any age.</p>
 		<p><a href="virtualization.html"><b>Virtualization</b></a></p>
